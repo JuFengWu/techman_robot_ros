@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: tm_grasp_description
+    relative_path: urdf/tm700_robot_joint_limited_eih_hand.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/tm700.srdf
+  CONFIG:
+    author_name: leo
+    author_email: leo.wu@qsitw.com
+    generated_timestamp: 1557737202
