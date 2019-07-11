@@ -1,0 +1,7 @@
+
+string positionName
+float64[] jointPositionRad
+float64[] jointPositionDeg
+float64[] cartesianPosition
+---
+bool success

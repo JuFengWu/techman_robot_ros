@@ -1,3 +1,4 @@
+#pragma once
 #include "../include/robot_move_interface.h"
 
 namespace test_move_api{
@@ -17,32 +18,5 @@ namespace test_move_api{
     bool get_is_plan();
   };
 
-  bool RosMoveStub::joint_move(std::vector<double> jointTarget, bool isPlan){
-      currentJointPosition.clear();
-      for(auto jointPosition : jointTarget){
-          currentJointPosition.push_back(jointPosition);
-      }
-      this->isPlan = isPlan;
-      return true;
-  }
-  bool RosMoveStub::cartesian_move(std::vector<double> cartesianTarget, bool isPlan){
-      currentEndEffectorPosition.clear();
-      for(auto cartesianPosition : cartesianTarget){
-          currentEndEffectorPosition.push_back(cartesianPosition);
-      }
-      this->isPlan = isPlan;
-      return true;
-  }
-  int RosMoveStub::get_joint_number(){
-      return 6;
-  }
-  std::vector<double> RosMoveStub::get_current_end_effector_position(){
-      return currentEndEffectorPosition;
-  }
-  std::vector<double> RosMoveStub::get_current_joint_position(){
-      return currentJointPosition;
-  }
-  bool RosMoveStub::get_is_plan(){
-      return isPlan;
-  }
+  
 }

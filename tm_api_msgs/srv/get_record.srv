@@ -1,0 +1,18 @@
+
+
+---
+string[] recorded_joint_positions_name
+string[] recorded_cartesian_positions_name
+float64[] j1
+float64[] j2
+float64[] j3
+float64[] j4
+float64[] j5
+float64[] j6
+float64[] c1
+float64[] c2
+float64[] c3
+float64[] c4
+float64[] c5
+float64[] c6
+float64[] c7

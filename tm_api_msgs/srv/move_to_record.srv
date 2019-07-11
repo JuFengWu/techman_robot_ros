@@ -1,0 +1,5 @@
+
+string positionName
+bool isPlan
+---
+bool success
