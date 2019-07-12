@@ -33,7 +33,7 @@ Record cartesian and move it, end effector will move straightly, but when it nea
 3. Type ```rosrun tm_move_api test_move_api ``` you can see the test results.
 
 #### How to use tm move python api
-1. Open a termianl and Type ```roslaunch *your_ros_working_space*/src/tm700_moveit_config/launch/demo.launch``` to open rviz
+1. Open a terminal and Type ```roslaunch *your_ros_working_space*/src/tm700_moveit_config/launch/demo.launch``` to open rviz
 2. Open another terminal and type ```rosrun tm_move_api tm_move_serverice```
 3. Open the other terminal, and type ```python2  *your_ros_working_space*/src/tm_move_python/scrips/tm_move.py```, you will see the TM-Robot start to move
 4. If you want to modify robot path, you can just modify *your_ros_working_space*/src/tm_move_python/scrips/tm_move.py to change the path
