@@ -41,7 +41,7 @@ Record cartesian and move it, end effector will move straightly, but when it nea
 
 #### How to test tm move python api
 1. Open a terminal and type ```roscore```, and wait for ros run 
-2. Open another terminal and type ```rosrun tm_move_api tm_move_serverice```
+2. Open another terminal and type ```rosrun tm_move_api tm_move_service```
 3. Open the other terminal, and type ```python2  *your_ros_working_space*/src/tm_move_python/test_client_scrip.py```, the test will start, it will show all test process and result.
 
 ##### Enjoy it!
