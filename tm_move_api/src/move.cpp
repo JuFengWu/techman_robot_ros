@@ -3,7 +3,7 @@
 #include"iostream"
 
 void use_ros_move_control_robot(){
-  ros_robot::RosMove rosMove("tm_robot"); 
+  robot_move_api::RosMove rosMove("tm_robot"); 
   std::vector<double> jointTarget1{-1.0,0.0,-1.0,0.0,-1.0,0.0};
   rosMove.joint_move(jointTarget1,false);
   ROS_INFO("end Joint target 1");
@@ -18,8 +18,8 @@ void use_ros_move_control_robot(){
 }
 
 void use_robot_point_control(){
-  ros_robot::RosMove rosMove("tm_robot"); 
-  robot_points_control::RobotPointControl tmRobot(&rosMove);
+  robot_move_api::RosMove rosMove("tm_robot"); 
+  robot_move_api::RobotPointControl tmRobot(&rosMove);
 
   
   //std::vector<double> jointTarget1{-1.0,0.0,-1.0,0.0,-1.0,0.0};

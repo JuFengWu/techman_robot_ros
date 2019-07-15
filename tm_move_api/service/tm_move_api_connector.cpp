@@ -8,10 +8,10 @@ bool TmMoveApiConnector::start_work(tm_api_msgs::start_work::Request &req,tm_api
         robotMove = new test_move_api::RosMoveStub("test_robot");
     }
     else{
-        robotMove = new ros_robot::RosMove("tm_robot");
+        robotMove = new robot_move_api::RosMove("tm_robot");
     }
     ROS_INFO("start_work is called");
-    robotPointControl = new robot_points_control::RobotPointControl(robotMove);
+    robotPointControl = new robot_move_api::RobotPointControl(robotMove);
     isInitialed = true;
     ROS_INFO("finish start_work");
     return true;

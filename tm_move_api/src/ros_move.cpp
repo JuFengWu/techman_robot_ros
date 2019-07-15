@@ -1,7 +1,7 @@
 #include "../include/ros_move.h"
 
 #include<string>
-namespace ros_robot{
+namespace robot_move_api{
     void RosMove::ros_initial(){
         
         ros::NodeHandle node_handle;

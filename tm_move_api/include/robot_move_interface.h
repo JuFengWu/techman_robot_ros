@@ -1,7 +1,7 @@
 #pragma once
 #include<vector>
 #include<string>
-namespace robot_points_control{
+namespace robot_move_api{
   class RobotMove{
 
   private:

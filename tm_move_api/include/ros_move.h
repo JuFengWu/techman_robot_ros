@@ -7,8 +7,8 @@
 #include <moveit_msgs/AttachedCollisionObject.h>
 #include <moveit_msgs/CollisionObject.h>
 #include <moveit_visual_tools/moveit_visual_tools.h>
-namespace ros_robot{
-  class RosMove : public robot_points_control::RobotMove
+namespace robot_move_api{
+  class RosMove : public RobotMove
   {
   private:
       std::string PLANNING_GROUP ;
@@ -19,7 +19,7 @@ namespace ros_robot{
       const double jump_threshold =0.0;
       const double eef_step = 0.01;
   public:
-    RosMove(std::string robotName):robot_points_control::RobotMove(robotName){
+    RosMove(std::string robotName):RobotMove(robotName){
       ros_initial();
     };
     bool joint_move(std::vector<double> jointTarget, bool isPlan) override;

@@ -6,7 +6,7 @@
 #include"robot_move_interface.h"
 
 
-namespace robot_points_control{
+namespace robot_move_api{
   
 
   class RobotRecordPoint{

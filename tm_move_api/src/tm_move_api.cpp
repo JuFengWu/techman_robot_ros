@@ -2,7 +2,7 @@
 #include"../include/tm_move_api.h"
 #include "../include/utility.h"
 #include <map>
-namespace robot_points_control{
+namespace robot_move_api{
   
   void RobotRecordPoint::record_position(std::string positionName,std::vector<double> position){
     if(this->is_input_number_correct(position)){

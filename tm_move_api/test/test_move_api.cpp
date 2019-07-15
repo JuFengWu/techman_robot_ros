@@ -6,10 +6,10 @@ class TestMoveApi : public testing::Test
 {
 protected:
     test_move_api::RosMoveStub *rosMoveStub;
-    robot_points_control::RobotPointControl *testRobot;
+    robot_move_api::RobotPointControl *testRobot;
     virtual void SetUp(){
         rosMoveStub = new test_move_api::RosMoveStub("test_robot");
-        testRobot = new robot_points_control::RobotPointControl(rosMoveStub);
+        testRobot = new robot_move_api::RobotPointControl(rosMoveStub);
     }
     virtual void TearDown(){
         delete this->testRobot;

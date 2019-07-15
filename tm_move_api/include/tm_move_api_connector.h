@@ -12,8 +12,8 @@
 class TmMoveApiConnector
 {
 private:
-    robot_points_control::RobotPointControl* robotPointControl;
-    robot_points_control::RobotMove* robotMove;
+    robot_move_api::RobotPointControl* robotPointControl;
+    robot_move_api::RobotMove* robotMove;
     bool isInitialed;
     bool check_initialize();
     bool check_vector_size_correct(std::vector<double> input,int idealInputSize,std::string errorMessage);
