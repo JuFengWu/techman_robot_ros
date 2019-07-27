@@ -1,8 +1,24 @@
 FROM ros-melodic-vnc-base
 LABEL maintainer "leowu102000@gmail.com"
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
+#install moveit-visual-tools
+RUN echo "y" |apt-get install ros-melodic-moveit-visual-tools
+
+# add google test
+RUN cd /usr/src/gtest && cmake CMakeLists.txt && make && cp *.a /usr/lib
+
+#copy techman_robot_ros into docker
+RUN mkdir -p /root/ws_techman_robot/src
+RUN cd /root/ws_techman_robot/src && git clone https://github.com/JuFengWu/techman_robot_ros.git
 
 
-RUN /bin/bash -c "echo 'source /opt/ros/melodic/setup.bash' >> /root/.bashrc"
+#build source file
+RUN /bin/bash -c "source /opt/ros/melodic/setup.bash && cd /root/ws_techman_robot && catkin_make"
+RUN /bin/bash -c "echo 'source /root/ws_techman_robot/devel/setup.bash' >> /root/.bashrc"
+
+
+
 
 
 

@@ -6,6 +6,13 @@ RUN add-apt-repository universe
 RUN add-apt-repository restricted
 RUN add-apt-repository multiverse
 
+#install git
+RUN apt-get update
+RUN echo "y" | apt-get install git 
+
+#install vim
+RUN echo "y" | apt-get install vim
+
 #install ros melodic
 ENV ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 RUN apt-get update
@@ -33,4 +40,6 @@ RUN echo "y" | apt-get install ros-melodic-gazebo-ros-pkgs ros-melodic-gazebo-ro
 
 #install ros-industrial
 RUN echo "y" |apt-get install ros-melodic-industrial-core
+
+
 
