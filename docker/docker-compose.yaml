@@ -1,0 +1,11 @@
+version: '3.0'
+services:
+  ros_melodic_vnc_base:
+    build: 
+      context: ./
+      dockerfile: ./melodic_vnc_base/Dockerfile_base
+
+  ros_melodic_vnc_techman:
+    build:
+      context: ./
+      dockerfile: ./techman_vnc/Dockerfile_tm
