@@ -7,11 +7,11 @@ I also use the Google test (Gtest) to make sure this code is stable.
 > __NOTE__:  
 This project is developing. Currently, only TM5_700 is available. In the future, I hope it is not only a simulator but also can control real robot.
 
-#### Use docker-compose to build and run it (Recommend)
+#### Use docker-compose to build and run it (Linux, Recommend)
 1. Download source this code and open terminal to go to "docker" folder
 2. Type ```docker-compose up -d``` and it will start to build the environment.
 3. Type ```docker run -it --rm -p 6080:80 docker_ros_melodic_vnc_techman``` and open browser and navigate to ```localhost:6080```
-4. This source code will at ```/root/ws_techman_robot```
+4. This source code will be at ```/root/ws_techman_robot```
 
 
 #### The packages or and environment
