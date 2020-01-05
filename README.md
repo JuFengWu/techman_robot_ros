@@ -9,8 +9,8 @@ This project is developing. Currently, only TM5_700 is available. In the future,
 
 #### Use docker-compose to build and run it (Linux, Recommend)
 1. Download source this code and open terminal to go to "docker" folder
-2. Type ```docker-compose up -d``` and it will start to build the environment.
-3. Type ```docker run -it --rm -p 6080:80 docker_ros_melodic_vnc_techman``` and open browser and navigate to ```localhost:6080```
+2. Type ```docker-compose build``` and it will start to build the environment.
+3. Type ```docker-compose run -d ros_melodic_vnc_techman``` and open browser and navigate to ```localhost:6080```
 4. This source code will be at ```/root/ws_techman_robot```
 
 
