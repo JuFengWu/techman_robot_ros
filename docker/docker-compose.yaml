@@ -1,11 +1,17 @@
 version: '3.0'
 services:
   ros_melodic_vnc_base:
+    image: ros_melodic_vnc_base_images
     build: 
       context: ./melodic_vnc_base
       dockerfile: Dockerfile_base
+    container_name: ros_melodic_vnc_base_container
 
   ros_melodic_vnc_techman:
+    image: ros_melodic_vnc_techman_images
     build:
       context: ./techman_vnc
       dockerfile: Dockerfile_tm
+    container_name: ros_melodic_vnc_techman_container
+    ports:
+      - 6080:80

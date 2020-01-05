@@ -1,4 +1,4 @@
-FROM docker_ros_melodic_vnc_base
+FROM ros_melodic_vnc_base_images
 LABEL maintainer "leowu102000@gmail.com"
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
